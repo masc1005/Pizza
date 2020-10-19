@@ -6,6 +6,7 @@ import Drink from '../models/Drink'
 
 class ProductsController {
 
+    // Register from new tastes
     async RegisterTaste(req: Request, res: Response) {
         try {
             const TasteRepository = getRepository(Taste)
@@ -30,6 +31,20 @@ class ProductsController {
         }
     }
 
+    //  Show all tastes
+    async showTaste(req: Request, res: Response) {
+        try {
+            const TasteRepository = getRepository(Taste)
+            const allTaste = await TasteRepository.find()
+
+            return res.json({allTaste}).status(200)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    // Register from new tastes
     async RegisterDrinks(req: Request, res: Response) {
         try {
             const TasteRepository = getRepository(Drink)
@@ -52,7 +67,18 @@ class ProductsController {
         } catch (error) {
             console.log(error)
         }
+    }
 
+    // Show all drinks
+    async showDrink(req: Request, res: Response) {
+        try {
+            const TasteRepository = getRepository(Drink)
+            const allDrinks = await TasteRepository.find()
+
+            return res.json({allDrinks})
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 
