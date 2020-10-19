@@ -3,26 +3,28 @@ import { getRepository } from 'typeorm'
 import { v4 } from 'uuid'
 import Users from '../models/Users'
 
+class UserController {
+	async Register(req: Request, res: Response) {
+		try {
+			const UserRepository = getRepository(Users)
 
+			const { user, password } = req.body
+			const id: string = v4()
 
-class userController {
-    async user(res: Response, req: Request) {
-        const UserRepository = getRepository(Users)
+			const userExist = await UserRepository.findOne({ where: { user } })
 
-        const { user , password } = req.body
-        const id: string = v4()
+			if (userExist) {
+				return res.sendStatus(409);
+			}
 
-        const userExist = await UserRepository.find({ where: { user } })
+			const savinUser = UserRepository.create({ id, user, password })
+			await UserRepository.save(savinUser)
 
-        if (userExist) {
-            return res.sendStatus(409);
-        }
-
-        const savinUser = UserRepository.create({ id , user , password })
-        await UserRepository.save(savinUser)
-
-        return res.json(savinUser)
-    }
+			return res.json(savinUser)
+		} catch (error) {
+			console.log(error)
+		}
+	}
 }
 
-export default new userController()
+export default new UserController()

@@ -4,13 +4,13 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 class Users{ 
 
     @PrimaryGeneratedColumn("uuid")
-    id: string
+    id?: string
 
     @Column()
-    user: string
+    user?: string
 
     @Column()
-    password: string
+    password?: string
 
 }
 
