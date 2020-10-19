@@ -4,10 +4,7 @@ import { v4 } from 'uuid'
 import Users from '../models/Users'
 
 class UserController {
-	index(req: Request, res: Response){
-		return res.send({ userID: req.userId })
-	}
-
+	
 	async Register(req: Request, res: Response) {
 		try {
 			const UserRepository = getRepository(Users)
