@@ -15,10 +15,11 @@ routes.post('/auth', AuthController.authenticate)
 routes.post('/users', userController.Register)
 routes.post('/newTaste', productsController.RegisterTaste)
 routes.post('/newDrink', productsController.RegisterDrinks)
+routes.post('/newSolicitation', productsController.createSoliciation)
 
 routes.get('/allTaste', productsController.showTaste)
 routes.get('/allDrink', productsController.showDrink)
-
+routes.get('/allSolicitations', productsController.showSolicitations)
 
 // routes.get('/users', authMiddleware, [...]
 
