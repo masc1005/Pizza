@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-// import authMiddleware from './app/middlewares/authMiddleware'
+//import authMiddleware from './app/middlewares/authMiddleware'
 
 import userController from './app/controllers/userController'
 import AuthController from './app/controllers/AuthController'
@@ -12,15 +12,17 @@ const routes = Router()
 
 routes.post('/auth', AuthController.authenticate)
 
-routes.post('/users', userController.Register)
-routes.post('/newTaste', productsController.RegisterTaste)
-routes.post('/newDrink', productsController.RegisterDrinks)
-routes.post('/newSolicitation', productsController.createSoliciation)
+//routes.get('/users', authMiddleware, userController.Index)
 
 routes.get('/allTaste', productsController.showTaste)
 routes.get('/allDrink', productsController.showDrink)
 routes.get('/allSolicitations', productsController.showSolicitations)
 
-// routes.get('/users', authMiddleware, [...]
+routes.post('/users', userController.Register)
+routes.post('/newTaste', productsController.RegisterTaste)
+routes.post('/newDrink', productsController.RegisterDrinks)
+routes.post('/newSolicitation', productsController.createSoliciation)
+
+
 
 export default routes

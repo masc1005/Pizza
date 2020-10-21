@@ -4,6 +4,9 @@ import { v4 } from 'uuid'
 import Users from '../models/Users'
 
 class UserController {
+	// Index (req: Request, res: Response){
+	// 	res.send({ userId: req.userId })
+	// }
 	
 	async Register(req: Request, res: Response) {
 		try {

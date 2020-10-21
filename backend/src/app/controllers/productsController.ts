@@ -97,6 +97,13 @@ class ProductsController {
             const { table, fk_taste, fk_drink } = req.body
             const id_solicitation: string = v4()
 
+            const allSoliciations = await SoliciationRepository.find({ where: { table } })
+
+            if (!allSoliciations) {
+                const error = createError(409, 'Thats not your table');
+                throw error;
+            }
+
             const solictedDrink = await DrinkRepository.find({
                 where: {
                     code: fk_drink
@@ -117,12 +124,6 @@ class ProductsController {
                 throw error;
             }    
 
-            const allSoliciations = await SoliciationRepository.find({ where: { table } })
-
-            if (allSoliciations) {
-                const error = createError(409, 'Thats not your table');
-                throw error;
-            }
 
             const savinSolicitations = SoliciationRepository.create({
                 id_solicitation, table, fk_drink, fk_taste

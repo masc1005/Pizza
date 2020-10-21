@@ -17,13 +17,13 @@ export default function authMiddleware(req: Request, res: Response, next: NextFu
 
     const token = authorization?.replace('Bearer', '').trim();
 
-    
+
     try {
         const data = jwt.verify(token, 'secret')
 
         const { id } = data as TokenPayload
 
-        req.userId = id
+        req.idUser = id
 
         return next()
     } catch {
