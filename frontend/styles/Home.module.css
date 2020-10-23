@@ -1,0 +1,105 @@
+/* Style do index */
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(234,70,81,1) 76%, rgba(179,0,12,0.8939950980392157) 100%);
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style do Login*/
+.cardsHome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.cardLogin{
+  width: 30%;
+  height: 90%;
+  max-height: 1500px;
+  background-color: #660007;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+
+.cardLogin form input[type="text"] {
+  background-color: #EA4651;
+  text-align: center;
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 15%;
+}
+
+.cardLogin form input[type="password"] {
+  background-color: #EA4651;
+  text-align: center;
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.cardLogin form input::placeholder {
+  color: #111111;
+}
+
+.topForm img{
+  padding-bottom: 20%;
+  width: 30%;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.cardLogin form input[type="submit"] {
+  background-color: #EA4651;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 5%;
+  opacity: 1;
+}
+
+.cardLogin form input[type="submit"]:hover {
+  opacity: 0.5;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+/* Style da Home Atendente*/
+
+.containerAtendente{
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+

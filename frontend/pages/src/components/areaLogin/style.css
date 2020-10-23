@@ -1,0 +1,11 @@
+.cardsHome{
+    max-width: 90%;
+    justify-content: space-between;
+}
+
+.cardsLogin{
+    width: 40%;
+    height: 90%;
+    background-color: #660007;
+    border-radius: 0% 0% 0% 0%;
+}
