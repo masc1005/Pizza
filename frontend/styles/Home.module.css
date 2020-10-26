@@ -5,7 +5,9 @@
   display: flex;
   flex-direction: column;
   background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(234,70,81,1) 76%, rgba(179,0,12,0.8939950980392157) 100%);
+  background: radial-gradient(circle,
+  rgba(255,255,255,1) 0%, rgba(234,70,81,1) 76%,
+  rgba(179,0,12,0.8939950980392157) 100%);
 }
 
 .main {
@@ -85,6 +87,7 @@
   font-weight: bold;
   margin-top: 5%;
   opacity: 1;
+  cursor: pointer;
 }
 
 .cardLogin form input[type="submit"]:hover {
@@ -94,7 +97,7 @@
   transform: scale(1.3);
 }
 
-/* Style da Home Atendente*/
+/* Style da Home Atendente */
 
 .containerAtendente{
   min-height: 100vh;
@@ -103,3 +106,106 @@
   flex-direction: column;
 }
 
+.atendenteArea{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.atendenteBtn{
+  max-width: 150px;
+  width: 100%;
+  max-height: 1500px;
+  height: 100%;
+  margin-left: 2%;
+}
+
+.atendenteBtn button{
+  display: block;
+  background-color: #B3000C;
+  border: none;
+  height: 50px;
+  width: 250px;
+  border-radius: 30px;
+  margin-top: 25%;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.atendenteBtn button:hover{
+  opacity: 0.5;
+  font-size: 27px;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+.atendenteCard{
+  background-color: #B3000C;
+  border: none;
+  height: 580px;
+  max-height: 580px;
+  width: 250px;
+  border-radius: 30px;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 2;
+  margin-left: 10%;
+  margin-right: 1%;
+}
+.atendenteCard hr{
+  color: #111111;
+}
+
+/* Style da Home Cozinheiro */
+.cozinArea{
+  display: flex;
+  margin-top: 2%;
+  width: 105%;
+  height: 100%;
+  justify-content: center;
+  margin-left: -7%;
+}
+
+
+/* Style da Home Cliente */
+.clientForm input{
+  display: block;
+  background-color: #B3000C;
+  border: none;
+  height: 50px;
+  width: 250px;
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 3%;
+}
+
+.clientForm input[type="submit"]{
+  margin-top: 25%;
+  font-size: 18px;
+  cursor: pointer;
+}
+.clientForm input[type="submit"]:hover{
+  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.clientForm label{
+  text-align: center;
+  display: flex;
+  justify-self: last baseline;
+  margin-top: 25%;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}

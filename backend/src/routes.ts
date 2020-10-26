@@ -14,9 +14,9 @@ routes.post('/auth', AuthController.authenticate)
 
 //routes.get('/users', authMiddleware, userController.Index)
 
-routes.get('/allTaste', productsController.showTaste)
-routes.get('/allDrink', productsController.showDrink)
-routes.get('/allSolicitations', productsController.showSolicitations)
+routes.get('/Tastes', productsController.showTaste)
+routes.get('/Drinks', productsController.showDrink)
+routes.get('/Solicitations', productsController.showSolicitations)
 
 routes.post('/users', userController.Register)
 routes.post('/newTaste', productsController.RegisterTaste)
