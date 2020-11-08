@@ -146,20 +146,19 @@
 }
 
 
-.atendenteCard{
+.Cardapio{
   background-color: #B3000C;
   border: none;
-  height: 580px;
+  height: 500px;
   max-height: 580px;
-  width: 250px;
+  width: 600px;
   border-radius: 30px;
   justify-content: center;
   text-align: center;
   flex-grow: 2;
   margin-left: 10%;
-  margin-right: 1%;
 }
-.atendenteCard hr{
+.Cardapio hr{
   color: #111111;
 }
 
@@ -185,7 +184,7 @@
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  margin-left: 3%;
+  margin-left: -3%;
 }
 
 .clientForm input[type="submit"]{
@@ -208,4 +207,38 @@
   justify-content: center;
   font-size: 18px;
   font-weight: bold;
+}
+
+.tabList {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-left: 2%;
+}
+
+.tabList #btnTastes{
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10%;
+  border-radius: 30px;
+  background-color: #EA4651;
+  transition: 1s;
+}
+.tabList #btnTastes:hover{
+  background-color: #B3000C;
+}
+
+.tabList #btnDrinks{
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10%;
+  border-radius: 30px;
+  background-color: #EA4651;
+  transition: 1s;
+}
+
+.tabList #btnDrinks:hover{
+  background-color: #B3000C;
 }

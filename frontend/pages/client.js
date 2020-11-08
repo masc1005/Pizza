@@ -14,8 +14,8 @@ export default function Home() {
 
       <main>
         <div className={styles.atendenteArea}>
+            <Card />
           <FormSolic />
-          <Card />
         </div>
       </main>
     </div>
